@@ -158,7 +158,7 @@ img {
     letter-spacing: 0.03em;
     color: #212121;
     margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 .modal-input {
   min-width: 448px;
@@ -185,6 +185,9 @@ img {
     margin-left: 40px;
 }
 
+.input-label {
+  margin-bottom: 20px;
+}
 
 .modal-textarea {
     width: 448px;
@@ -193,7 +196,7 @@ img {
     border-radius: 4px;
     margin-left: 40px;
     margin-right: 40px;
-    margin-bottom: 20px;
+    
     font-weight: 400;
       font-size: 12px;
       line-height: 1.67;
@@ -217,7 +220,9 @@ img {
   border-color: var(--button-color);
 }
 
-
+.modal-link {
+  text-decoration: none;
+}
 
 .modal-icon {
   position: absolute;
@@ -264,12 +269,55 @@ img {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #757575;
+    margin-top: 20px;
 }
+
 
 .checkbox-text {
   color: var(--button-color);
-  text-decoration: solid;
+  position: relative;
+  margin-left: 2px;
 }
+
+.checkbox-text::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #2196f3;
+    border-radius: 1px;
+    position: absolute;
+    display: block;
+    bottom: 0;
+}
+
+.checkbox {
+  appearance: none;
+}
+
+.checkbox-label {
+  display: inline-block;
+}
+
+.checkbox-label::before {
+
+}
+  
+
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+}
+
+
+.checkbox:checked + .icon {
+  background-color: #2196f3;
+  background-image: url(../images/icon-icon-check.svg);
+}
+
 .decision {
   padding-top: 200px;
   padding-bottom: 200px;
