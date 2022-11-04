@@ -137,6 +137,11 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close:focus {
+  fill: var(--button-color)
 }
 
 .is-hiden {
@@ -160,12 +165,17 @@ img {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
+  padding-left: 40px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.label {
+.modal-input:focus{
+  border-color: var(--button-color);
+}
+
+.input-label span{
+  display: block;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.67;
@@ -174,6 +184,8 @@ img {
     margin-bottom: 4px;
     margin-left: 40px;
 }
+
+
 .modal-textarea {
     width: 448px;
     min-height: 120px;
@@ -189,9 +201,75 @@ img {
       color: rgba(117, 117, 117, 0.5);
       padding-top: 12px;
       padding-left: 16px;
+      outline: transparent;
+      transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+}
+.modal-textarea:focus {
+  border-color: var(--button-color);
+}
+
+.input-wrap {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-textarea:focus{
+  border-color: var(--button-color);
 }
 
 
+
+.modal-icon {
+  position: absolute;
+  left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus+.modal-icon {
+  fill: var(--button-color);
+}
+
+
+.modal-send{
+  
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+  background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-top: 30px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 200px;
+    position: absolute;
+    left: 164px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+.checkbox-text {
+  color: var(--button-color);
+  text-decoration: solid;
+}
 .decision {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -289,14 +367,18 @@ height: 50px;
 }
 
 .send {
-display: flex;
+ 
+}
+
+.send span {
+  display: block;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
 }
 
 .footer-send{
